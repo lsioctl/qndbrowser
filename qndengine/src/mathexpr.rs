@@ -10,8 +10,8 @@ enum MathExpr {
         left: Box<MathExpr>,
         right: Box<MathExpr>,
     },
-    Litteral {
-        litteral: i64,
+    Literal {
+        literal: i64,
     },
 }
 
@@ -20,7 +20,7 @@ impl MathExpr {
         match self {
             MathExpr::Plus { left, right } => left.eval() + right.eval(),
             MathExpr::Minus { left, right } => left.eval() - right.eval(),
-            MathExpr::Litteral { litteral } => *litteral,
+            MathExpr::Literal { literal } => *literal,
         }
     }
 }
