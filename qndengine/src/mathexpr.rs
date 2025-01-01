@@ -32,10 +32,10 @@ mod tests {
     #[test]
     fn construct_test() {
         let expr = MathExpr::Plus {
-            left: Box::new(MathExpr::Litteral { litteral: 2 }),
+            left: Box::new(MathExpr::Literal { literal: 2 }),
             right: Box::new(MathExpr::Minus {
-                left: Box::new(MathExpr::Litteral { litteral: 5 }),
-                right: Box::new(MathExpr::Litteral { litteral: 1 }),
+                left: Box::new(MathExpr::Literal { literal: 5 }),
+                right: Box::new(MathExpr::Literal { literal: 1 }),
             }),
         };
 
@@ -48,10 +48,10 @@ mod tests {
     #[test]
     fn eval_first_test() {
         let expr = MathExpr::Plus {
-            left: Box::new(MathExpr::Litteral { litteral: 2 }),
+            left: Box::new(MathExpr::Literal { literal: 2 }),
             right: Box::new(MathExpr::Minus {
-                left: Box::new(MathExpr::Litteral { litteral: 6 }),
-                right: Box::new(MathExpr::Litteral { litteral: 3 }),
+                left: Box::new(MathExpr::Literal { literal: 6 }),
+                right: Box::new(MathExpr::Literal { literal: 3 }),
             }),
         };
 
